@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Viraasat - Saree Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#fbf3e4",
+                        "surface-container-high": "#efe7d9",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary": "#735c00",
+                        "tertiary": "#170001",
+                        "on-secondary-fixed": "#241a00",
+                        "on-tertiary-fixed": "#3d0506",
+                        "surface-tint": "#476083",
+                        "surface-container": "#f5edde",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1e1b13",
+                        "primary-container": "#001f3f",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#e9c349",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f8f0e1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "on-primary": "#ffffff",
+                        "surface": "#fff8ef",
+                        "surface-variant": "#e9e2d3",
+                        "on-primary-container": "#6f88ad",
+                        "on-secondary-container": "#745c00",
+                        "primary": "#000613",
+                        "background": "#fff8ef",
+                        "secondary-container": "#fed65b",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#343026",
+                        "on-tertiary-container": "#c66d68",
+                        "outline-variant": "#c4c6cf",
+                        "on-surface-variant": "#43474e",
+                        "outline": "#74777f",
+                        "on-primary-fixed-variant": "#2f486a",
+                        "surface-container-highest": "#e9e2d3",
+                        "surface-bright": "#fff8ef",
+                        "tertiary-container": "#420809",
+                        "secondary-fixed": "#ffe088",
+                        "primary-fixed": "#d4e3ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#77302d",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#e1d9cb",
+                        "on-background": "#1e1b13",
+                        "inverse-primary": "#afc8f0",
+                        "primary-fixed-dim": "#afc8f0",
+                        "on-primary-fixed": "#001c3a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-sm": ["Bodoni Moda"],
+                        "label-caps": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-md": ["Bodoni Moda"],
+                        "button": ["Montserrat"],
+                        "display-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "button": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Subtle image hover zoom */
+        .image-zoom-container { overflow: hidden; }
+        .image-zoom-container img { transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .image-zoom-container:hover img { transform: scale(1.05); }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fff8ef; }
+        ::-webkit-scrollbar-thumb { background: #e1d9cb; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #c4c6cf; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar (Desktop Only) -->
+<header class="hidden md:flex w-full top-0 sticky z-50 bg-surface border-b border-outline-variant flat no shadows transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto w-full">
+<a class="font-display-lg text-display-lg text-primary" href="#">VIRAASAT</a>
+<nav class="flex space-x-8">
+<a class="font-button text-button tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Kurti</a>
+<a class="font-button text-button tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Collections</a>
+<a class="font-button text-button tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Fresh Arrivals</a>
+<a class="font-button text-button tracking-widest text-secondary border-b border-secondary pb-1 cursor-pointer active:scale-95" href="#">Saree</a>
+<a class="font-button text-button tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Blouse</a>
+</nav>
+<div class="flex space-x-6 items-center">
+<button class="text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95 relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+<button class="text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Mobile/Tablet Only) - Hidden by default, toggled via JS -->
+<div class="fixed inset-0 bg-scrim/50 z-[100] hidden md:hidden opacity-0 transition-opacity duration-300" id="mobile-menu">
+<nav class="h-screen w-64 fixed left-0 top-0 bg-surface-container border-r border-outline-variant flat no shadows flex flex-col py-8 px-4 transform -translate-x-full transition-transform duration-300 ease-in-out" id="side-nav-panel">
+<div class="flex justify-between items-center mb-8">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary">VIRAASAT</span>
+<button class="text-on-surface-variant p-2" id="close-menu">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="mb-8">
+<p class="font-headline-sm text-headline-sm text-primary mb-1">The Collection</p>
+<p class="font-body-md text-sm text-on-surface-variant">Modern Heritage Ethnic Wear</p>
+</div>
+<div class="flex flex-col space-y-2 flex-grow">
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="apparel">apparel</span>
+<span class="font-button text-button">Kurti</span>
+</a>
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-button text-button">Collections</span>
+</a>
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="new_releases">new_releases</span>
+<span class="font-button text-button">Fresh Arrivals</span>
+</a>
+<a class="flex items-center p-3 rounded-DEFAULT text-secondary font-bold bg-surface-container-highest transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4 fill" data-icon="settings_ethernet">settings_ethernet</span>
+<span class="font-button text-button">Saree</span>
+</a>
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="dry_cleaning">dry_cleaning</span>
+<span class="font-button text-button">Blouse</span>
+</a>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/30 flex flex-col space-y-2">
+<a class="flex items-center p-2 text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px]" data-icon="local_shipping">local_shipping</span>
+                    Orders
+                </a>
+<a class="flex items-center p-2 text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px]" data-icon="favorite">favorite</span>
+                    Wishlist
+                </a>
+<a class="flex items-center p-2 text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px]" data-icon="help_outline">help_outline</span>
+                    Help
+                </a>
+</div>
+<button class="mt-6 w-full py-3 bg-primary-container text-on-primary font-button text-button tracking-widest hover:bg-primary transition-colors">
+                Book a Stylist
+            </button>
+</nav>
+</div>
+<!-- Mobile Header (Visible only on md:hidden) -->
+<header class="md:hidden flex justify-between items-center px-margin-mobile py-4 bg-surface border-b border-outline-variant sticky top-0 z-40">
+<button class="text-primary p-1" id="open-menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<a class="font-display-lg-mobile text-[28px] text-primary" href="#">VIRAASAT</a>
+<button class="text-primary p-1 relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative w-full h-[716px] md:h-[870px] flex items-center justify-center bg-surface-container-low overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-80 mix-blend-multiply" data-alt="A cinematic, editorial fashion shot of a luxurious silk saree draped elegantly. The fabric shimmers subtly in soft, diffused studio lighting. The setting is minimal, featuring a textured plaster wall in a champagne tone. The aesthetic is high-end, Modern Heritage, emphasizing the intricate hand-woven details and deep jewel tones of the textile against the neutral background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCK9hcd6acHThmvddIlXp8ybOWUYO3t86ZLKvj1K-ZYvmQdxswmXGvDS9ORGINudgSGf8ZrC0WZ9-0cg53Rj23SOBd_ZdUsibQgU-FBduZJABYJ_K937lkXe9ZbL95-6xp-tGdaxH3tEFrlndNRdR8uc5804Zfdq16Fufgtix5HSjX_86AgmwUDjlPfUQW5w9MlnAyZf8YPKLx0gKBE1Syk26KKqi8KD6XoB-DRJF-UE1K6dSiAfJX')"></div>
+<div class="relative z-10 text-center px-4 max-w-3xl flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4 block">THE HERITAGE COLLECTION</span>
+<h1 class="font-display-lg text-display-lg md:text-[80px] md:leading-[88px] text-primary mb-6">Saree</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">Six yards of unstitched elegance. A curated selection of handwoven silks, gossamer chiffons, and meticulously embroidered masterpieces.</p>
+<button class="bg-primary-container text-on-primary font-button text-button px-8 py-4 hover:bg-primary transition-colors tracking-widest flex items-center">
+                    EXPLORE COLLECTION <span class="material-symbols-outlined ml-2 text-[18px]">arrow_downward</span>
+</button>
+</div>
+</section>
+<!-- Refinement Bar -->
+<section class="w-full border-b border-outline-variant/50 bg-surface/90 backdrop-blur-md sticky top-[64px] md:top-[88px] z-30">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex flex-wrap justify-between items-center gap-4">
+<div class="flex items-center space-x-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+<button class="px-4 py-2 bg-primary text-on-primary font-button text-[12px] whitespace-nowrap">All Sarees</button>
+<button class="px-4 py-2 bg-surface-container text-primary font-button text-[12px] whitespace-nowrap hover:bg-surface-variant transition-colors border border-outline-variant/30">Kanjeevaram Silk</button>
+<button class="px-4 py-2 bg-surface-container text-primary font-button text-[12px] whitespace-nowrap hover:bg-surface-variant transition-colors border border-outline-variant/30">Banarasi Brocade</button>
+<button class="px-4 py-2 bg-surface-container text-primary font-button text-[12px] whitespace-nowrap hover:bg-surface-variant transition-colors border border-outline-variant/30">Chanderi</button>
+<button class="px-4 py-2 bg-surface-container text-primary font-button text-[12px] whitespace-nowrap hover:bg-surface-variant transition-colors border border-outline-variant/30">Embroidered Net</button>
+</div>
+<div class="flex items-center space-x-4 ml-auto">
+<button class="flex items-center font-button text-[12px] text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[16px] mr-1">tune</span> Filter
+                    </button>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<button class="flex items-center font-button text-[12px] text-on-surface-variant hover:text-primary transition-colors">
+                        Sort By <span class="material-symbols-outlined text-[16px] ml-1">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Product Grid (Asymmetric Editorial Style) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-x-gutter gap-y-20">
+<!-- Product 1: Hero Large -->
+<article class="md:col-span-8 group cursor-pointer">
+<div class="image-zoom-container bg-surface-container-low mb-6 h-[600px] md:h-[800px] relative">
+<img class="w-full h-full object-cover" data-alt="A full-length editorial photograph of a model wearing a deep emerald green Kanjeevaram silk saree with intricate gold zari borders. The styling is contemporary minimal, with sleek hair and statement gold jewelry. The background is a soft, warmly lit beige studio wall. High resolution, sharp focus on the woven texture, emphasizing Modern Heritage luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_hx84UiHiF9KOS-AEnDH-9_pW1ltFcIsWvhIv1TcQuDiDuMoVxlfPJCwo0zroS3Bmh0rv1YieJm1U-Waxwf3Lq1HdlSHr7PprrbQ941uYC-NDzcyCCGT4XzZEa1o0g-Ff9eEU966jD6rvD4BU3uQSJ1ua0w-4NBUjJ9M81Kg0KgKCjykDAHolymEbxLrflI0SzG6wSDZfuQkLiekmZJ0EeTJHwg5Q5ILWIoZcgSxIK_DAx4MYwrPw"/>
+<button class="absolute bottom-6 right-6 w-12 h-12 bg-surface/90 rounded-full flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-secondary hover:text-on-secondary shadow-sm">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-secondary transition-colors">The Emerald Zari</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-1">Pure Kanjeevaram Silk • Handwoven</p>
+</div>
+<p class="font-body-md text-primary">$1,250</p>
+</div>
+</article>
+<!-- Product 2: Medium Vertical -->
+<article class="md:col-span-4 md:mt-32 group cursor-pointer">
+<div class="image-zoom-container bg-surface-container-low mb-6 h-[500px] md:h-[600px] relative">
+<img class="w-full h-full object-cover" data-alt="A close-up fashion shot focusing on the pallu (drape) of a blush pink Chanderi silk saree. The semi-sheer fabric is adorned with delicate silver foil (mukaish) work catching the light. Minimalist aesthetic, soft natural lighting, high-end editorial feel conveying ethereal lightness and traditional craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAouSEfmPnkSU0ffvuv5TzM65gja8OXyOFFjCe2vTn7Ren9b6o104KtUiPHfSnLxx6nXYionkL4GEEcJfs-fVCnJ7jOllzPvjbsC3cLvbZ8DlCfdN6wPBHs5_AQrVBJQEwvzC7P9g7jqi6gF33tS2rFxUEXS4CAEl-XaSjheq7o9x3GAKUyOxz8SgXWJfkvn9m7Pwxj-YDB0ocPK1VxfuHRI0uJEUtgP0x8oV6j58-tbvBCRoZoCGkw"/>
+<button class="absolute bottom-6 right-6 w-12 h-12 bg-surface/90 rounded-full flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-secondary hover:text-on-secondary shadow-sm">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-secondary transition-colors">Blush Mukaish</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-1">Chanderi Cotton Silk • Silver Foil</p>
+</div>
+<p class="font-body-md text-primary">$480</p>
+</div>
+</article>
+<!-- Product 3: Medium Vertical -->
+<article class="md:col-span-4 group cursor-pointer">
+<div class="image-zoom-container bg-surface-container-low mb-6 h-[500px] md:h-[600px] relative">
+<img class="w-full h-full object-cover" data-alt="A styled flat-lay photograph of a rich midnight blue Banarasi brocade saree folded elegantly. The dense, intricate gold floral motifs are sharply in focus. The saree rests on a clean, dark surface to enhance the jewel tones. Sophisticated, moody, and highly textured, highlighting the premium textile quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc-vla_S_JQ7dktohLDL3e658e4Kwikz1K5GHnzU4sG3_blw7zo-AgLlokitYUyR_WSSQRanzMcnUUxlhsG0pEpiFXLllVsIxsN54ofH6AHgicdzhXR7owFbl_wSegdB4UTfb2IYPO7WmGJGvgQNbLkVHUjtCsnSNRB_xfYZez93UrH1WkG5tvm8C2p_t22cmh3B5r_uDxlIKXmbifSKwd36ZTq-L1m4gRYOpDKvN58qSxcFCKZiTh"/>
+<button class="absolute bottom-6 right-6 w-12 h-12 bg-surface/90 rounded-full flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-secondary hover:text-on-secondary shadow-sm">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-secondary transition-colors">Midnight Brocade</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-1">Banarasi Silk • Gold Zari</p>
+</div>
+<p class="font-body-md text-primary">$890</p>
+</div>
+</article>
+<!-- Product 4: Wide Landscape Detail -->
+<article class="md:col-span-8 md:-mt-16 group cursor-pointer">
+<div class="image-zoom-container bg-surface-container-low mb-6 h-[400px] md:h-[500px] relative">
+<img class="w-full h-full object-cover" data-alt="An artistic detail shot of a saree border featuring intricate hand-embroidery (zardozi) with pearls and metallic threads on an ivory net fabric. The depth of field is shallow, drawing attention to the meticulous craftsmanship. The lighting is soft and directional, creating subtle highlights on the pearls. Minimalist and ultra-luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhnv8crbRZ05kynDa5rDrXR0wvhCvrWPV6SlC-BqTE5r-7jC4sNZxPkbfcGFYNZtK4Qxc2ZxngaB5VMfu6os8WE5Jy-urYyzvfuvLlVot0Hj0cEeIX2yrhqSIzibhEhMN2MnSM14C1rdFzsnhipmEfFNe-xPomdck7BfVeazE5kB-1FPOBdGmE0Uap1jbR_2rxNgBD7IeLfekVl0h1tCGExlX1p5r0Z4NuOKzUqBO1uv7My2c7nTk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-6 right-6 w-12 h-12 bg-surface/90 rounded-full flex items-center justify-center text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-secondary hover:text-on-secondary shadow-sm">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2 group-hover:text-secondary transition-colors">Ivory Pearl Zardozi</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-1">Net • Hand Embroidered Pearls</p>
+</div>
+<p class="font-body-md text-primary">$1,650</p>
+</div>
+</article>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="border border-secondary text-primary font-button px-8 py-3 hover:bg-secondary hover:text-on-secondary transition-colors tracking-widest">
+                    LOAD MORE
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-primary text-on-primary border-t border-outline-variant flat no shadows">
+<div class="flex flex-col items-center justify-center py-12 px-margin-desktop space-y-6 max-w-container-max mx-auto">
+<span class="font-display-lg text-display-lg text-on-primary mb-4">VIRAASAT</span>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Heritage</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Privacy Policy</a>
+</div>
+<p class="font-body-md text-body-md text-on-primary/50 text-sm mt-8 text-center">© 2024 Viraasat Luxury Ethnic Wear. All Rights Reserved.</p>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle Logic
+            const openMenuBtn = document.getElementById('open-menu');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const sideNavPanel = document.getElementById('side-nav-panel');
+
+            function openMenu() {
+                mobileMenu.classList.remove('hidden');
+                // Small delay to allow display:block to apply before animating opacity/transform
+                setTimeout(() => {
+                    mobileMenu.classList.remove('opacity-0');
+                    sideNavPanel.classList.remove('-translate-x-full');
+                }, 10);
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.add('opacity-0');
+                sideNavPanel.classList.add('-translate-x-full');
+                // Wait for animation to finish before hiding
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }, 300);
+            }
+
+            if (openMenuBtn) openMenuBtn.addEventListener('click', openMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+            
+            // Close menu when clicking outside the panel
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', (e) => {
+                    if (e.target === mobileMenu) closeMenu();
+                });
+            }
+
+            // Subtle header shadow on scroll
+            const header = document.getElementById('top-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow-sm');
+                    header.classList.remove('no shadows');
+                } else {
+                    header.classList.remove('shadow-sm');
+                    header.classList.add('no shadows');
+                }
+            });
+        });
+    </script>
+</body></html>
