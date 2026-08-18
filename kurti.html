@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Kurti Collection - SHRI TIRUMALA</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -127,38 +125,43 @@
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen flex selection:bg-secondary-container selection:text-on-secondary-container">
-<!-- SideNavBar (Desktop Only) -->
-<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container border-r border-outline-variant py-8 px-4 z-40">
-<div class="mb-12 text-center">
+<!-- Sidebar Overlay for Mobile -->
+<div class="fixed inset-0 bg-black/50 z-40 hidden md:hidden transition-opacity opacity-0 duration-300" id="sidebarOverlay"></div>
+<!-- SideNavBar -->
+<aside class="flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container border-r border-outline-variant py-8 px-4 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebar">
+<button aria-label="Close Menu" class="md:hidden absolute top-4 right-4 text-on-surface-variant hover:text-primary transition-colors" id="closeSidebarBtn">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="mb-12 text-center mt-4 md:mt-0">
 <div class="font-display-lg text-display-lg text-primary leading-none mb-2">V</div>
 <h1 class="font-headline-sm text-headline-sm text-primary mb-1">The Collection</h1>
 <p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest text-[10px]">Modern Heritage Ethnic Wear</p>
 </div>
 <nav class="flex-1 flex flex-col gap-2 w-full">
-<a class="flex items-center gap-4 px-4 py-3 rounded text-secondary font-bold bg-surface-container-highest transition-all duration-300 ease-in-out group" href="#">
+<a class="flex items-center gap-4 px-4 py-3 rounded text-secondary font-bold bg-surface-container-highest transition-all duration-300 ease-in-out group" href="kurti.html">
 <span class="material-symbols-outlined text-secondary" data-icon="apparel">apparel</span>
 <span class="font-button text-button">Kurti</span>
 </a>
-<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="#">
+<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="collections.html">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="auto_awesome">auto_awesome</span>
 <span class="font-button text-button group-hover:text-primary transition-colors">Collections</span>
 </a>
-<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="#">
+<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="fresh_arrivals.html">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="new_releases">new_releases</span>
 <span class="font-button text-button group-hover:text-primary transition-colors">Fresh Arrivals</span>
 </a>
-<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="#">
+<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="saree.html">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="settings_ethernet">settings_ethernet</span>
 <span class="font-button text-button group-hover:text-primary transition-colors">Saree</span>
 </a>
-<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="#">
+<a class="flex items-center gap-4 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors transition-all duration-300 ease-in-out group" href="blouse.html">
 <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="dry_cleaning">dry_cleaning</span>
 <span class="font-button text-button group-hover:text-primary transition-colors">Blouse</span>
 </a>
 </nav>
 <div class="mt-auto flex flex-col gap-6">
 <button class="w-full py-3 bg-primary text-on-primary font-button text-button flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
-<span>Book a Stylist</span>
+<span class="">Book a Stylist</span>
 </button>
 <div class="flex justify-center gap-6 border-t border-outline-variant pt-6">
 <a aria-label="Orders" class="text-on-surface-variant hover:text-primary transition-colors" href="#">
@@ -176,17 +179,15 @@
 <!-- Main Content Wrapper -->
 <main class="flex-1 md:ml-64 flex flex-col min-h-screen max-w-[1440px] mx-auto w-full">
 <!-- TopNavBar (Web & Mobile Hybrid) -->
-<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant">
+<header class="w-full top-0 sticky z-40 bg-surface border-b border-outline-variant">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <!-- Mobile Menu Button (Hidden on Desktop) -->
-<button aria-label="Menu" class="md:hidden text-primary p-2 -ml-2">
+<button aria-label="Menu" class="md:hidden text-primary p-2 -ml-2" id="openSidebarBtn">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
 <!-- Brand / Desktop Nav Links -->
 <div class="flex items-center gap-12">
-<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tighter cursor-pointer transition-transform duration-200 active:scale-95" href="#">
-                        SHRI TIRUMALA
-                    </a>
+<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tighter cursor-pointer transition-transform duration-200 active:scale-95" href="#">SHRI TIRUMALA</a>
 <!-- Desktop Links from JSON -->
 <nav class="hidden md:flex items-center gap-8">
 <a class="font-button text-button uppercase tracking-widest text-secondary border-b border-secondary pb-1 cursor-pointer transition-transform duration-200 active:scale-95" href="#">Kurti</a>
@@ -220,43 +221,19 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant">A masterclass in modern heritage. Discover our curated selection of hand-embroidered tunics, where centuries-old craftsmanship meets contemporary silhouette precision.</p>
 </div>
 <!-- Filters/Controls -->
-<div class="flex flex-wrap items-center gap-4">
-<button class="flex items-center gap-2 px-4 py-2 border-b border-primary text-primary font-button text-button hover:text-secondary hover:border-secondary transition-colors">
-<span class="material-symbols-outlined text-[18px]" data-icon="tune">tune</span>
-                        Filter
-                    </button>
-<div class="relative">
-<select class="appearance-none bg-transparent border-b border-primary text-primary font-button text-button py-2 pl-2 pr-8 rounded-none focus:outline-none focus:border-secondary focus:ring-0 cursor-pointer hover:text-secondary hover:border-secondary transition-colors">
-<option value="featured">Featured</option>
-<option value="new">New Arrivals</option>
-<option value="price-asc">Price: Low to High</option>
-<option value="price-desc">Price: High to Low</option>
-</select>
-<span class="material-symbols-outlined absolute right-1 top-1/2 -translate-y-1/2 pointer-events-none text-primary" data-icon="expand_more">expand_more</span>
-</div>
-</div>
+
 </div>
 <!-- Active Filters (Chips) -->
-<div class="flex flex-wrap gap-3 mb-12">
-<div class="px-4 py-1.5 bg-surface-container-high text-primary font-label-caps text-label-caps flex items-center gap-2">
-                    SILK BLEND
-                    <button aria-label="Remove filter" class="hover:text-secondary"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
-</div>
-<div class="px-4 py-1.5 bg-surface-container-high text-primary font-label-caps text-label-caps flex items-center gap-2">
-                    HAND EMBROIDERED
-                    <button aria-label="Remove filter" class="hover:text-secondary"><span class="material-symbols-outlined text-[14px]" data-icon="close">close</span></button>
-</div>
-<button class="text-on-surface-variant font-button text-button underline editorial-text hover:text-primary ml-2">Clear All</button>
-</div>
+
 <!-- Product Grid (Asymmetric Editorial Layout) -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-gutter gap-y-16">
 <!-- Product Card 1 (Large - spans 2 cols on lg) -->
 <div class="product-card group cursor-pointer lg:col-span-2">
 <div class="relative w-full aspect-[4/3] lg:aspect-[16/9] bg-surface-container-low overflow-hidden product-card-img-container mb-6">
 <!-- Main Image -->
-<img alt="Midnight Zari Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="A high-fashion editorial shot of a luxurious midnight blue silk kurti featuring intricate, fine-line gold zari embroidery around the neckline. The model is posed against a minimalist, warm champagne-toned background with dramatic, soft studio lighting highlighting the rich texture of the fabric. The composition is wide and cinematic, embodying a modern heritage aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIFYKh7Z5RL2u1kG-YnhvV5l4wu6qGGbqM69ZBpwT2Ei1LMRGZRPY3tBDx9hQcPymtFaf7uxCT5EqLaIO9Y8ldy0_YxD29TnXxDl1Y8ZfRHgBCL0eZw3TyttS9c1SeTKQGOJp7VWrOnft03SpjK_O4y7ptM9uvAAvKaI5wFr3ugtaeVne-ZI5MUPlaDo9NSebzIQFucyKc9t9YwCmt5LcDKIX0d6In9lsb7DuqnIi1iPw1NIXX4NhE"/>
+<img alt="Midnight Zari Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="A high-fashion editorial shot of a luxurious midnight blue silk kurti featuring intricate, fine-line gold zari embroidery around the neckline. The model is posed against a minimalist, warm champagne-toned background with dramatic, soft studio lighting highlighting the rich texture of the fabric. The composition is wide and cinematic, embodying a modern heritage aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIFYKh7Z5RL2u1kG-YnhvV5l4wu6qGGbqM69ZBpwT2Ei1LMRGZRPY3tBDx9hQcPymtFaf7uxCT5EqLaIO9Y8ldy0_YxD29TnXxDl1Y8ZfRHgBCL0eZw3TyttS9c1SeTKQGOJp7VWrOnft03SpjK_O4y7ptM9uvAAvKaI5wFr3ugtaeVne-ZI5MUPlaDo9NSebzIQFucyKc9t9YwCmt5LcDKIX0d6In9lsb7DuqnIi1iPw1NIXX4NhE">
 <!-- Hover Detail Image -->
-<img alt="Embroidery Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A macro detail shot of fine gold zari embroidery on dark midnight blue silk fabric. The lighting is angled to catch the metallic sheen of the threads, emphasizing the tactile luxury and meticulous craftsmanship of the traditional Indian textile work against a minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ZOx-L4mnIL1qR0D_QUdAtLoFPdjiVKEXxyghaK_qWtKt3imVed8iJ3wkKhX-7R552mNgkxEdNWRcdsJR0jhR20qyFbfNvX_qOw8L4rI9KGiZk6Umse1KdYGRlUE0u_pihbHiRYXh8aaDyIGP6jgUI4-791sJdQW-rrp-GIRs5roF2-jtAqtrb1m4DVuV4g6wKWD65gnSHh6vTkBuoc4uPV1f47e-uhIzXigyRyKFuLgTnHlRnrLD"/>
+<img alt="Embroidery Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A macro detail shot of fine gold zari embroidery on dark midnight blue silk fabric. The lighting is angled to catch the metallic sheen of the threads, emphasizing the tactile luxury and meticulous craftsmanship of the traditional Indian textile work against a minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ZOx-L4mnIL1qR0D_QUdAtLoFPdjiVKEXxyghaK_qWtKt3imVed8iJ3wkKhX-7R552mNgkxEdNWRcdsJR0jhR20qyFbfNvX_qOw8L4rI9KGiZk6Umse1KdYGRlUE0u_pihbHiRYXh8aaDyIGP6jgUI4-791sJdQW-rrp-GIRs5roF2-jtAqtrb1m4DVuV4g6wKWD65gnSHh6vTkBuoc4uPV1f47e-uhIzXigyRyKFuLgTnHlRnrLD">
 <!-- Floating actions (Hover state) -->
 <div class="absolute bottom-6 right-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-3">
 <button aria-label="Add to Wishlist" class="w-10 h-10 bg-surface text-primary rounded-full flex items-center justify-center hover:bg-primary hover:text-surface transition-colors shadow-[0_4px_20px_rgba(0,31,63,0.08)]">
@@ -276,8 +253,8 @@
 <!-- Product Card 2 (Standard Portrait) -->
 <div class="product-card group cursor-pointer">
 <div class="relative w-full aspect-[3/4] bg-surface-container-low overflow-hidden product-card-img-container mb-6">
-<img alt="Ivory Chanderi Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="A portrait-oriented fashion photograph of an ivory white chanderi silk kurti adorned with delicate pastel floral motifs. The garment drapes elegantly on a mannequin, set against a pristine, light-mode studio backdrop. Soft, diffused lighting enhances the sheer, breathable quality of the fabric, presenting a clean, minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfQiouLYTbYcDzHUKkI9G01LNY2CA7A_FUpfjI890pbaJPoIFbcgdT8-qAE1ygGs9txHXbZk6TQphqySr-4SJx0imT1KZ-Jju2HC3yx8wLsvqQMtKP8gXrCh6G2Jh3KZogP-oFoRY1lQrxc5ojk-pFak67noCm_CrvvCcf7pmUQlwtbIO9mSbEsd0VSuWvzf4BrPLC-r3-f8O01KL0UDQqJSoOZqlIP6drNBRAgm3tgrfphCEMVnXP"/>
-<img alt="Fabric Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A close-up shot of sheer ivory chanderi fabric revealing subtle, hand-woven pastel floral patterns. The lighting is soft and bright, emphasizing the delicate weave and airy texture of the premium textile in a modern, sophisticated style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6dsZJ69QkQ6FZpadDFeARKt9AdKeFZN0sVUirgnRxqU6g8BzF39ela6GRNJZxNhtay-ZHoe1nHY1_FEjkhIF-PzyNEj9vc_AihLxQ6z2Sxu_H1QRV5cx5c6FrgNUNyjVXKQQs2YQPni-QM1eGnDg6JE_AXedoXJKiKLQBB0DRNCEZ0htfu1qGz1I9x4FRrc1eAPMLoceNlFbzhE5kqdwNzi6vyF687KiLPHXGlam6rUpH-JW7kBF6"/>
+<img alt="Ivory Chanderi Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="A portrait-oriented fashion photograph of an ivory white chanderi silk kurti adorned with delicate pastel floral motifs. The garment drapes elegantly on a mannequin, set against a pristine, light-mode studio backdrop. Soft, diffused lighting enhances the sheer, breathable quality of the fabric, presenting a clean, minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfQiouLYTbYcDzHUKkI9G01LNY2CA7A_FUpfjI890pbaJPoIFbcgdT8-qAE1ygGs9txHXbZk6TQphqySr-4SJx0imT1KZ-Jju2HC3yx8wLsvqQMtKP8gXrCh6G2Jh3KZogP-oFoRY1lQrxc5ojk-pFak67noCm_CrvvCcf7pmUQlwtbIO9mSbEsd0VSuWvzf4BrPLC-r3-f8O01KL0UDQqJSoOZqlIP6drNBRAgm3tgrfphCEMVnXP">
+<img alt="Fabric Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A close-up shot of sheer ivory chanderi fabric revealing subtle, hand-woven pastel floral patterns. The lighting is soft and bright, emphasizing the delicate weave and airy texture of the premium textile in a modern, sophisticated style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6dsZJ69QkQ6FZpadDFeARKt9AdKeFZN0sVUirgnRxqU6g8BzF39ela6GRNJZxNhtay-ZHoe1nHY1_FEjkhIF-PzyNEj9vc_AihLxQ6z2Sxu_H1QRV5cx5c6FrgNUNyjVXKQQs2YQPni-QM1eGnDg6JE_AXedoXJKiKLQBB0DRNCEZ0htfu1qGz1I9x4FRrc1eAPMLoceNlFbzhE5kqdwNzi6vyF687KiLPHXGlam6rUpH-JW7kBF6">
 </div>
 <div class="flex flex-col items-center text-center px-4">
 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Ivory Chanderi Tunic</h3>
@@ -287,8 +264,8 @@
 <!-- Product Card 3 (Standard Portrait) -->
 <div class="product-card group cursor-pointer">
 <div class="relative w-full aspect-[3/4] bg-surface-container-low overflow-hidden product-card-img-container mb-6">
-<img alt="Mustard Geometric Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="A stylish fashion shot of a muted mustard yellow cotton-silk blend kurti featuring structured, geometric block prints in deep navy. The garment is displayed flatly against a contrasting light beige surface. The lighting is crisp and even, creating a sharp, modern editorial look that highlights the bold yet traditional pattern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj3fJLprPnnnwaxj9NXomanmYP1LNbETANrfttN3AWzcgpRwcTXYNZejM036-T9O4xRWcXZ37M-hjtrbQDuNKxmKMuq3ehdY1AB4euhhgfUP9bOtLHEnnIb36GxVf2LvL05v47O3XzsOT3jeGVOsLJwAD8r_2pK1aMpRfQQXMA4TI3VTV91l8O_EYPoCTyjPoJdbBlMmclcUyRzAmGWEaeKiAC7LMNC-WCaQEgJqEQQYQY6RXl1z41"/>
-<img alt="Print Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A detailed texture image showing the precise edges of navy geometric block prints on a textured mustard yellow fabric. The high-contrast lighting brings out the tactile qualities of the cotton-silk blend, reinforcing a premium, artisanal design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcTAq1LBBkFuv7mMrMVkq_4gZMRHPGUYeAroM966uyUumGSoCKy9HHmDCh0dJku2Nrp03ZpKbwBjrBGbNBxEHUnUITn1CIWeAgFEPbZzqZDCZpF_Zd6aSo20nmxs2_fKg3pSkVud8rcpDCN5PqFmETdgH5FqG8GYlAbyt5iue_aQOXA07hwqJ9fl_9Tmv6E6Az9IH1RP-qixvdrz4wmO5yuMcEjm5gLEarjsuNl_qp7hBqgChtF3P5"/>
+<img alt="Mustard Geometric Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="A stylish fashion shot of a muted mustard yellow cotton-silk blend kurti featuring structured, geometric block prints in deep navy. The garment is displayed flatly against a contrasting light beige surface. The lighting is crisp and even, creating a sharp, modern editorial look that highlights the bold yet traditional pattern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj3fJLprPnnnwaxj9NXomanmYP1LNbETANrfttN3AWzcgpRwcTXYNZejM036-T9O4xRWcXZ37M-hjtrbQDuNKxmKMuq3ehdY1AB4euhhgfUP9bOtLHEnnIb36GxVf2LvL05v47O3XzsOT3jeGVOsLJwAD8r_2pK1aMpRfQQXMA4TI3VTV91l8O_EYPoCTyjPoJdbBlMmclcUyRzAmGWEaeKiAC7LMNC-WCaQEgJqEQQYQY6RXl1z41">
+<img alt="Print Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A detailed texture image showing the precise edges of navy geometric block prints on a textured mustard yellow fabric. The high-contrast lighting brings out the tactile qualities of the cotton-silk blend, reinforcing a premium, artisanal design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcTAq1LBBkFuv7mMrMVkq_4gZMRHPGUYeAroM966uyUumGSoCKy9HHmDCh0dJku2Nrp03ZpKbwBjrBGbNBxEHUnUITn1CIWeAgFEPbZzqZDCZpF_Zd6aSo20nmxs2_fKg3pSkVud8rcpDCN5PqFmETdgH5FqG8GYlAbyt5iue_aQOXA07hwqJ9fl_9Tmv6E6Az9IH1RP-qixvdrz4wmO5yuMcEjm5gLEarjsuNl_qp7hBqgChtF3P5">
 </div>
 <div class="flex flex-col items-center text-center px-4">
 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Ochre Block Print Kurti</h3>
@@ -298,8 +275,8 @@
 <!-- Product Card 4 (Standard Portrait) -->
 <div class="product-card group cursor-pointer">
 <div class="relative w-full aspect-[3/4] bg-surface-container-low overflow-hidden product-card-img-container mb-6">
-<img alt="Emerald Velvet Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="An elegant fashion photograph of a deep emerald green velvet kurti with intricate vintage silver threadwork along the hem and cuffs. The model is partially visible in a sophisticated pose against a dark, moody background. The lighting is directional and dramatic, creating a rich, opulent mood characteristic of high-end luxury fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlkKuYPhMQJa_nKKOitQ5EgvQiF9DP8qpw58-16xk-JBsUTyNEyD_ixauC0KeMaAnQTpU073cMuOIVqzpCv1JJDkA1gMbtltLW5YfjT3Ukzhvgy-Xxr16w4KUng7xjiH5sX1xE2k_Rnn_SHG0HXOvzFcrh5hSmGvnIQLxcoIoNZqMtfzwZDyRUgUOvK0-lAhsCIo5h-qu0F384tRaIZVh86DdBGOjtAkcQhK1VI7Ve19WfGrBTi1iL"/>
-<img alt="Velvet Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A macro detail photograph of plush emerald green velvet featuring ornate, antique silver embroidery. The luxurious texture of the velvet and the metallic sheen of the thread are highlighted by focused, dramatic lighting, conveying a sense of heritage and opulence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnNASzbti23RVQB85LZxuZbMRR-N9EutRHBt7a9cZboP3P7EYnVhDjmx9SUgBb93BssgFwQ88h6_1rxAJoy7UpJFdMwwa7evuwcehpA-RZ3tJH4r4ZW5gWB2IQXj8MMYCsp1qNv6h2Dys0cJxhSPgMM5AeKoAGRZ-fKbPamZIeasaasn78kNKGWwCNzBE1Q4qTzkV5mzzF08pchezLNqOoV5llBc5TQrAr8EtD9nvmweS2RMPLl9HM"/>
+<img alt="Emerald Velvet Kurti" class="absolute inset-0 w-full h-full object-cover img-main z-10" data-alt="An elegant fashion photograph of a deep emerald green velvet kurti with intricate vintage silver threadwork along the hem and cuffs. The model is partially visible in a sophisticated pose against a dark, moody background. The lighting is directional and dramatic, creating a rich, opulent mood characteristic of high-end luxury fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlkKuYPhMQJa_nKKOitQ5EgvQiF9DP8qpw58-16xk-JBsUTyNEyD_ixauC0KeMaAnQTpU073cMuOIVqzpCv1JJDkA1gMbtltLW5YfjT3Ukzhvgy-Xxr16w4KUng7xjiH5sX1xE2k_Rnn_SHG0HXOvzFcrh5hSmGvnIQLxcoIoNZqMtfzwZDyRUgUOvK0-lAhsCIo5h-qu0F384tRaIZVh86DdBGOjtAkcQhK1VI7Ve19WfGrBTi1iL">
+<img alt="Velvet Detail" class="absolute inset-0 w-full h-full object-cover img-hover z-0 opacity-0" data-alt="A macro detail photograph of plush emerald green velvet featuring ornate, antique silver embroidery. The luxurious texture of the velvet and the metallic sheen of the thread are highlighted by focused, dramatic lighting, conveying a sense of heritage and opulence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnNASzbti23RVQB85LZxuZbMRR-N9EutRHBt7a9cZboP3P7EYnVhDjmx9SUgBb93BssgFwQ88h6_1rxAJoy7UpJFdMwwa7evuwcehpA-RZ3tJH4r4ZW5gWB2IQXj8MMYCsp1qNv6h2Dys0cJxhSPgMM5AeKoAGRZ-fKbPamZIeasaasn78kNKGWwCNzBE1Q4qTzkV5mzzF08pchezLNqOoV5llBc5TQrAr8EtD9nvmweS2RMPLl9HM">
 </div>
 <div class="flex flex-col items-center text-center px-4">
 <span class="font-label-caps text-label-caps text-on-surface-variant mb-2">WINTER EDIT</span>
@@ -326,18 +303,45 @@
 </div>
 <!-- Footer -->
 <footer class="w-full mt-auto bg-primary text-on-primary flex flex-col items-center justify-center py-12 px-margin-mobile md:px-margin-desktop space-y-6 border-t border-outline-variant">
-<div class="font-display-lg text-display-lg text-on-primary mb-4 tracking-tighter">
-                SHRI TIRUMALA
-            </div>
+<div class="font-display-lg text-display-lg text-on-primary mb-4 tracking-tighter">SHRI TIRUMALA</div>
 <div class="flex flex-wrap justify-center gap-6 md:gap-12 mb-4">
 <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Sustainability</a>
 <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Heritage</a>
 <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Shipping &amp; Returns</a>
 <a class="font-body-md text-body-md text-on-primary/80 hover:text-secondary-container transition-colors cursor-pointer" href="#">Privacy Policy</a>
 </div>
-<div class="font-label-caps text-label-caps text-on-primary/60 tracking-widest text-center mt-8">
-                © 2024 SHRI TIRUMALA Luxury Ethnic Wear. All Rights Reserved.
-            </div>
+<div class="font-label-caps text-label-caps text-on-primary/60 tracking-widest text-center mt-8">© 2024 Shri Tirumala Luxury Ethnic Wear. All Rights Reserved.</div>
 </footer>
 </main>
+<script>
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const openSidebarBtn = document.getElementById('openSidebarBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+
+    function openSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        sidebarOverlay.classList.remove('hidden');
+        // slight delay to allow display:block to apply before animating opacity
+        setTimeout(() => {
+            sidebarOverlay.classList.remove('opacity-0');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.add('opacity-0');
+        setTimeout(() => {
+            sidebarOverlay.classList.add('hidden');
+        }, 300);
+        document.body.style.overflow = '';
+    }
+
+    openSidebarBtn.addEventListener('click', openSidebar);
+    closeSidebarBtn.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+</script>
+
+
 </body></html>
