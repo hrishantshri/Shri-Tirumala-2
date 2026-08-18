@@ -162,23 +162,23 @@
 <p class="font-body-md text-sm text-on-surface-variant">Modern Heritage Ethnic Wear</p>
 </div>
 <div class="flex flex-col space-y-2 flex-grow">
-<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="kurti.html">
 <span class="material-symbols-outlined mr-4" data-icon="apparel">apparel</span>
 <span class="font-button text-button">Kurti</span>
 </a>
-<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="collections.html">
 <span class="material-symbols-outlined mr-4" data-icon="auto_awesome">auto_awesome</span>
 <span class="font-button text-button">Collections</span>
 </a>
-<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="fresh_arrivals.html">
 <span class="material-symbols-outlined mr-4" data-icon="new_releases">new_releases</span>
 <span class="font-button text-button">Fresh Arrivals</span>
 </a>
-<a class="flex items-center p-3 rounded-DEFAULT text-secondary font-bold bg-surface-container-highest transition-colors duration-300" href="#">
+<a class="flex items-center p-3 rounded-DEFAULT text-secondary font-bold bg-surface-container-highest transition-colors duration-300" href="saree.html">
 <span class="material-symbols-outlined mr-4 fill" data-icon="settings_ethernet">settings_ethernet</span>
 <span class="font-button text-button">Saree</span>
 </a>
-<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="#">
+<a class="flex items-center p-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300" href="blouse.html">
 <span class="material-symbols-outlined mr-4" data-icon="dry_cleaning">dry_cleaning</span>
 <span class="font-button text-button">Blouse</span>
 </a>
@@ -377,4 +377,43 @@
             });
         });
     </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const sideNavPanel = document.getElementById('side-nav-panel');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (!sideNavPanel) return;
+
+    const currentPage = window.location.pathname.split('/').pop().toLowerCase() || 'saree.html';
+
+    sideNavPanel.querySelectorAll('a[href]').forEach(function (link) {
+        const href = link.getAttribute('href');
+        if (!href || href === '#') return;
+
+        const linkPage = href.split('/').pop().toLowerCase();
+
+        if (linkPage === currentPage) {
+            link.classList.remove('text-on-surface-variant');
+            link.classList.add('text-secondary', 'font-bold', 'bg-surface-container-highest');
+
+            const icon = link.querySelector('.material-symbols-outlined');
+            if (icon) icon.classList.add('fill');
+        }
+
+        link.addEventListener('click', function () {
+            if (window.innerWidth < 768 && mobileMenu) {
+                mobileMenu.classList.add('opacity-0');
+                sideNavPanel.classList.add('-translate-x-full');
+
+                setTimeout(function () {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+        });
+    });
+});
+</script>
+
 </body></html>
