@@ -185,31 +185,36 @@
     </style>
 </head>
 <body class="flex bg-background min-h-screen">
+<!-- Mobile Sidebar Backdrop -->
+<div id="sidebar-backdrop" class="fixed inset-0 bg-black/20 z-40 hidden md:hidden" aria-hidden="true"></div>
 <!-- SideNavBar (Mobile Bottom / Desktop Side) -->
-<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 border-r border-outline-variant bg-surface-container z-50 py-8 px-4">
+<nav class="fixed md:flex flex-col h-screen w-64 left-0 top-0 border-r border-outline-variant bg-surface-container z-50 py-8 px-4 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebar">
+<button id="mobile-menu-close"
+        class="md:hidden absolute top-5 right-4 material-symbols-outlined text-primary cursor-pointer"
+        type="button" aria-label="Close menu">close</button>
 <div class="mb-12 text-center">
 <div class="font-display-lg-mobile text-display-lg-mobile text-primary mb-2">SHRI TIRUMALA</div>
 <div class="font-headline-sm text-headline-sm text-primary mb-1">The Collection</div>
 <div class="font-body-md text-body-md text-on-surface-variant">Modern Heritage Ethnic Wear</div>
 </div>
 <div class="flex-1 space-y-2">
-<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="#">
+<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="kurti.html">
 <span class="material-symbols-outlined" data-icon="apparel">apparel</span>
 <span>Kurti</span>
 </a>
-<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="#">
+<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="collections.html">
 <span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
 <span>Collections</span>
 </a>
-<a class="flex items-center space-x-3 p-3 rounded text-secondary font-bold bg-surface-container-highest transition-colors duration-300 ease-in-out font-button text-button" href="#">
+<a class="flex items-center space-x-3 p-3 rounded text-secondary font-bold bg-surface-container-highest transition-colors duration-300 ease-in-out font-button text-button" href="fresh_arrivals.html">
 <span class="material-symbols-outlined" data-icon="new_releases" style="font-variation-settings: 'FILL' 1;">new_releases</span>
 <span>Fresh Arrivals</span>
 </a>
-<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="#">
+<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="saree.html">
 <span class="material-symbols-outlined" data-icon="settings_ethernet">settings_ethernet</span>
 <span>Saree</span>
 </a>
-<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="#">
+<a class="flex items-center space-x-3 p-3 rounded text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out font-button text-button" href="blouse.html">
 <span class="material-symbols-outlined" data-icon="dry_cleaning">dry_cleaning</span>
 <span>Blouse</span>
 </a>
@@ -236,7 +241,10 @@
 <main class="flex-1 md:ml-64 flex flex-col min-h-screen">
 <!-- TopNavBar (Mobile) -->
 <header class="md:hidden w-full top-0 sticky bg-surface z-40 border-b border-outline-variant flex justify-between items-center px-margin-mobile py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-transform duration-200 active:scale-95" id="mobile-menu-toggle">menu</span>
 <div class="font-display-lg-mobile text-display-lg-mobile text-primary">SHRI TIRUMALA</div>
+</div>
 <div class="flex space-x-4">
 <span class="material-symbols-outlined text-primary cursor-pointer transition-transform duration-200 active:scale-95" data-icon="search">search</span>
 <span class="material-symbols-outlined text-primary cursor-pointer transition-transform duration-200 active:scale-95" data-icon="shopping_bag">shopping_bag</span>
@@ -316,23 +324,69 @@
 <div class="font-body-md text-body-md text-on-primary/60 pt-4">© 2024 Shri Tirumala Luxury Ethnic Wear. All Rights Reserved.</div>
 </footer>
 </main>
-<!-- Mobile Bottom Navigation (Hidden on Desktop) -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t border-outline-variant flex justify-around items-center py-3 z-50 px-2 shadow-[0_-4px_20px_rgba(0,31,63,0.05)]">
-<a class="flex flex-col items-center p-2 text-on-surface-variant" href="kurti.html">
-<span class="material-symbols-outlined" data-icon="apparel">apparel</span>
-<span class="font-label-caps text-[10px] mt-1">Kurti</span>
-</a>
-<a class="flex flex-col items-center p-2 text-on-surface-variant" href="collections.html">
-<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
-<span class="font-label-caps text-[10px] mt-1">Collections</span>
-</a>
-<a class="flex flex-col items-center p-2 text-secondary" href="fresh_arrivals.html">
-<span class="material-symbols-outlined" data-icon="new_releases" style="font-variation-settings: 'FILL' 1;">new_releases</span>
-<span class="font-label-caps text-[10px] mt-1 font-bold">New</span>
-</a>
-<a class="flex flex-col items-center p-2 text-on-surface-variant" href="saree.html">
-<span class="material-symbols-outlined" data-icon="settings_ethernet">settings_ethernet</span>
-<span class="font-label-caps text-[10px] mt-1">Saree</span>
-</a>
-</nav>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+
+    if (!sidebar || !backdrop) return;
+
+    function openSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        sidebar.classList.add('translate-x-0');
+        backdrop.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+    }
+
+    function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        sidebar.classList.remove('translate-x-0');
+        backdrop.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    }
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            openSidebar();
+        });
+    }
+
+    if (menuClose) {
+        menuClose.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            closeSidebar();
+        });
+    }
+
+    backdrop.addEventListener('click', closeSidebar);
+
+    sidebar.querySelectorAll('a[href]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (window.innerWidth < 768) closeSidebar();
+        });
+    });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+            backdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+        } else {
+            sidebar.classList.add('-translate-x-full');
+            sidebar.classList.remove('translate-x-0');
+            backdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+    });
+});
+</script>
+
 </body></html>
