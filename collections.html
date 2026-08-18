@@ -205,8 +205,17 @@
 <span class="material-symbols-outlined cursor-pointer text-primary">shopping_bag</span>
 </div>
 </nav>
+<!-- Mobile Sidebar Backdrop -->
+<div id="sidebar-backdrop"
+     class="fixed inset-0 bg-black/20 z-40 hidden md:hidden"
+     aria-hidden="true"></div>
 <!-- Side Navigation (Web - Blueprint) -->
-<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container border-r border-outline-variant py-8 px-4 z-40" id="sidebar">
+<aside class="fixed md:flex flex-col h-screen w-64 left-0 top-0 bg-surface-container border-r border-outline-variant py-8 px-4 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebar">
+<!-- Mobile Sidebar Close -->
+<button id="mobile-menu-close"
+        class="md:hidden absolute top-5 right-4 material-symbols-outlined text-primary cursor-pointer"
+        type="button"
+        aria-label="Close menu">close</button>
 <!-- Brand/Header -->
 <div class="mb-12 px-4">
 <h1 class="font-display-lg text-headline-md text-primary mb-1">SHRI TIRUMALA</h1>
@@ -214,10 +223,6 @@
 </div>
 <!-- Navigation Links -->
 <nav class="flex flex-col gap-2 flex-grow">
-<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="kurti.html">
-<span class="material-symbols-outlined">apparel</span>
-<span class="font-button text-button">Kurti</span>
-</a>
 <!-- Active State Navigation -->
 <nav class="flex-1 flex flex-col gap-2 w-full">
 <a class="flex items-center gap-4 px-4 py-3 rounded text-secondary font-bold bg-surface-container-highest transition-all duration-300 ease-in-out group" href="kurti.html">
@@ -373,5 +378,66 @@
 </footer>
 </main>
 
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.getElementById('sidebar-backdrop');
+
+    if (!menuToggle || !sidebar || !backdrop) return;
+
+    function openSidebar() {
+        sidebar.classList.remove('-translate-x-full');
+        sidebar.classList.add('translate-x-0');
+        backdrop.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+    }
+
+    function closeSidebar() {
+        sidebar.classList.add('-translate-x-full');
+        sidebar.classList.remove('translate-x-0');
+        backdrop.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    }
+
+    menuToggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        openSidebar();
+    });
+
+    if (menuClose) {
+        menuClose.addEventListener('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            closeSidebar();
+        });
+    }
+
+    backdrop.addEventListener('click', closeSidebar);
+
+    // Close the mobile drawer after selecting a navigation page.
+    sidebar.querySelectorAll('a[href]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (window.innerWidth < 768) closeSidebar();
+        });
+    });
+
+    // Keep desktop behavior unchanged when resizing.
+    window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+            backdrop.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+        } else if (!sidebar.classList.contains('translate-x-0')) {
+            sidebar.classList.add('-translate-x-full');
+        }
+    });
+});
+</script>
 
 </body></html>
