@@ -295,5 +295,22 @@
         document.querySelectorAll('.fade-in-up').forEach((el) => {
             observer.observe(el);
         });
+
+        // Make all buttons clickable
+        document.querySelectorAll('button, a').forEach((element) => {
+            element.addEventListener('click', (e) => {
+                console.log('Button clicked:', element.textContent || element.getAttribute('aria-label') || 'Button');
+            });
+        });
+
+        // Logo click handler
+        document.querySelectorAll('img').forEach((img) => {
+            if (img.alt && img.alt.includes('Logo')) {
+                img.addEventListener('click', () => {
+                    console.log('Logo clicked');
+                    window.location.href = 'index.html';
+                });
+            }
+        });
     </script>
 </body></html>
