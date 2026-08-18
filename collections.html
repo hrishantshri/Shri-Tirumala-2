@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Collections - Viraasat Modern Heritage Ethnic Wear</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -199,7 +197,7 @@
 <!-- Mobile Top Navigation (Visible only on mobile) -->
 <nav class="md:hidden flex justify-between items-center px-margin-mobile py-4 bg-surface w-full top-0 sticky z-50 border-b border-outline-variant">
 <div class="flex gap-4">
-<span class="material-symbols-outlined cursor-pointer text-primary">menu</span>
+<span class="material-symbols-outlined cursor-pointer text-primary" id="mobile-menu-toggle">menu</span>
 <span class="material-symbols-outlined cursor-pointer text-primary">search</span>
 </div>
 <div class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tighter">SHRI TIRUMALA</div>
@@ -208,7 +206,7 @@
 </div>
 </nav>
 <!-- Side Navigation (Web - Blueprint) -->
-<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container border-r border-outline-variant py-8 px-4 z-40">
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container border-r border-outline-variant py-8 px-4 z-40" id="sidebar">
 <!-- Brand/Header -->
 <div class="mb-12 px-4">
 <h1 class="font-display-lg text-headline-md text-primary mb-1">SHRI TIRUMALA</h1>
@@ -216,24 +214,24 @@
 </div>
 <!-- Navigation Links -->
 <nav class="flex flex-col gap-2 flex-grow">
-<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="#">
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="kurti.html">
 <span class="material-symbols-outlined">apparel</span>
 <span class="font-button text-button">Kurti</span>
 </a>
 <!-- Active State Navigation -->
-<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-secondary font-bold bg-surface-container-highest transition-all duration-300 ease-in-out" href="#">
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-secondary font-bold bg-surface-container-highest transition-all duration-300 ease-in-out" href="collections.html">
 <span class="material-symbols-outlined">auto_awesome</span>
 <span class="font-button text-button">Collections</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="#">
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="fresh_arrivals.html">
 <span class="material-symbols-outlined">new_releases</span>
 <span class="font-button text-button">Fresh Arrivals</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="#">
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="saree.html">
 <span class="material-symbols-outlined">settings_ethernet</span>
 <span class="font-button text-button">Saree</span>
 </a>
-<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="#">
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container-low transition-colors duration-300 ease-in-out" href="blouse.html">
 <span class="material-symbols-outlined">dry_cleaning</span>
 <span class="font-button text-button">Blouse</span>
 </a>
@@ -264,11 +262,11 @@
 <!-- Top Navigation (Web - Blueprint) -->
 <header class="hidden md:flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto w-full top-0 sticky z-30 bg-surface border-b border-outline-variant">
 <div class="flex gap-8 items-center">
-<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="kurti.html">Kurti</a>
-<a class="font-button text-button uppercase tracking-widest text-secondary border-b border-secondary pb-1 hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="collections.html">Collections</a>
-<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="fresh_arrivals.html">Fresh Arrivals</a>
-<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="saree.html">Saree</a>
-<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="blouse.html">Blouse</a>
+<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Kurti</a>
+<a class="font-button text-button uppercase tracking-widest text-secondary border-b border-secondary pb-1 hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Collections</a>
+<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Fresh Arrivals</a>
+<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Saree</a>
+<a class="font-button text-button uppercase tracking-widest text-primary hover:text-secondary transition-colors duration-300 cursor-pointer active:scale-95" href="#">Blouse</a>
 </div>
 <!-- Empty div for centering logo if search was left, but here logo is left-ish via SideNav, so TopNav mostly for links and actions -->
 <div class="flex-grow"></div>
@@ -369,4 +367,6 @@
 <div class="font-body-md text-body-md text-on-primary/60 text-sm mt-8">© 2024 Shri Tirumala Luxury Ethnic Wear. All Rights Reserved.</div>
 </footer>
 </main>
+
+
 </body></html>
